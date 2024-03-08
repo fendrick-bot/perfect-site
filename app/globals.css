@@ -19,6 +19,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  box-shadow: 2px 2px 5px gray;
   
 }
 .navDiv{
@@ -32,7 +33,6 @@ h1{
   background: -webkit-linear-gradient(90deg,#5aacff, #0f5cb4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
 
 ul{
@@ -45,7 +45,6 @@ ul{
 li{
   padding: 0 15px;
   cursor: pointer;
-
 }
 li:hover{
   color: rgb(11, 99, 194);
@@ -60,7 +59,6 @@ button{
   font-size: 18px;
   border: none;
   transition: all 0.3s ease-in;
-
 }
 button:hover{
   border: 5px solid black;
@@ -78,12 +76,14 @@ menu{
   overflow: hidden;
   top: 120px;
   right: 6px;
-  background-color: #fff;
+  background-color: #ffffffbe;
   width: 230px;
   border-radius: 7px;
   border: 1px solid rgb(203, 203, 203);
   list-style-type: none;
   opacity: 0%;
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 5px gray;
 }
 #menuContent li{
   font-size: 18px;
@@ -98,7 +98,6 @@ menu{
 #menuContact, #menuTools, #menuPricing, #menuBlogs, #menuProducts {
   display: none;
 }
-
 
 @media only screen and (max-width: 1100px) {
   #navContact{
@@ -118,7 +117,6 @@ menu{
   }
 }
 
-
 @media only screen and (max-width: 850px) {
   #navTools{
     display: none;
@@ -129,11 +127,9 @@ menu{
   #menuTools{
     display: block;
   }
-
-
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 760px) {
   #navPricing{
     display: none;
   }
@@ -143,11 +139,12 @@ menu{
   h1{
     font-size: 25px;
   }
-
 }
 
-
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 650px){
+  nav{
+    padding: 13px 20px;
+  }
   nav ul{
     display: none;
   }
@@ -155,22 +152,26 @@ menu{
     display: block;
   }
   h1{
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bolder;
   }
   button{
     width: 85px;
-    height: 35px;
+    height: 38px;
     border-radius: 8px;
     font-size: 14px;
   }
   .navDiv{
-    /* height: 30px; */
     box-sizing: border-box;
     gap: 14px;
   }
-  #menuContent{
+
+  menu:hover #menuContent{
+    display: block;
+    top: 75px;
     left: 0;
     width: 100vw;
-    
+    opacity: 100%;
   }
+
 }
