@@ -38,6 +38,7 @@ search {
 }
 
 #search-dropdown {
+    max-height: 290px;
     border-radius: 5px;
     border: 1px solid rgb(219, 219, 219);
     position: absolute;
@@ -46,10 +47,14 @@ search {
     backdrop-filter: blur(5px);
     list-style-type: none;
     font-size: 1.5rem;
+    box-shadow: 2px 2px 5px rgb(162, 162, 162);
+    overflow-y: auto;
 }
 #search-dropdown li{
+    height: 35px;
     padding-left: 20px;
     padding-top: 7px;
+
 
 }
 #search-dropdown li:hover{

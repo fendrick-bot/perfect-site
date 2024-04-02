@@ -12,7 +12,7 @@ export default function SearchBox(){
         fetch(`https://backapi.yatrirestro.com/api/v1/station?stationName=${value.toUpperCase()}`)
         .then((res) => res.json())
         .then((json) =>{
-            setResult(json.data.slice(0,8));
+            setResult(json.data);
         })
     }
     const valSelected = (val) =>{
