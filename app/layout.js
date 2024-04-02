@@ -1,17 +1,21 @@
+'use client'
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import mainLogo from "../public/picture.png"
 import menuIcon from "../public/app.png"
 import "./globals.css";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Perfect Site",
-  description: "This is my perfect website",
-};
+// export const metadata = {
+//   title: "Perfect Site",
+//   description: "This is my perfect website",
+// };
 
 export default function RootLayout({ children }) {
+  const [isVisible , setVisible] = useState('disabledmenu')
+  // console.log(isVisible);
 
   return (
     <html lang="en">
@@ -34,8 +38,8 @@ export default function RootLayout({ children }) {
               <li id="navContact">Contact</li>
             </ul>
             <button>Login</button>
-            <menu> <Image src={menuIcon} width={25} />
-            <div id="menuContent">
+            <menu onClick={()=>{setVisible(isVisible == "activemenu"? 'disabledmenu': 'activemenu') }}> <Image src={menuIcon} width={25} />
+            <div id="menuContent" className= {isVisible} >
               <li>Home</li>
               <li id="menuProducts">Products</li>
               <li id="menuBlogs">Blogs</li>
@@ -47,12 +51,7 @@ export default function RootLayout({ children }) {
 
           </div>
 
-
-
         </nav>
-
-
-
         {children}</body>
     </html>
   );

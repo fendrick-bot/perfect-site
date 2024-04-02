@@ -6,11 +6,12 @@
   margin: 0;padding: 0;
 }
 body{
-  background-color: #cacaca;
+  background-color: #ffffff;
   box-sizing: border-box;
 }
 
 nav{
+  z-index: 100;
   width: 100%;
   box-sizing: border-box;
   background-color: #ffffff;
@@ -71,20 +72,27 @@ menu{
   display: none;
 }
 #menuContent{
-  display: none;
+  /* display: none; */
   position: absolute;
   overflow: hidden;
-  top: 120px;
+  top: 90px;
   right: 6px;
   background-color: #ffffffbe;
   width: 230px;
   border-radius: 7px;
   border: 1px solid rgb(203, 203, 203);
   list-style-type: none;
-  opacity: 0%;
+  /* opacity: 0%; */
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 5px gray;
 }
+.activemenu{
+  display: block;
+}
+.disabledmenu{
+  display: none;
+}
+
 #menuContent li{
   font-size: 18px;
   text-align: center;
@@ -95,6 +103,12 @@ menu{
   background-color: #7cc2ff;
   color: black;
 }  
+menu:hover #menuContent{
+  display: block;
+  top: 90px;
+  opacity: 100%;
+
+}
 #menuContact, #menuTools, #menuPricing, #menuBlogs, #menuProducts {
   display: none;
 }
@@ -108,12 +122,6 @@ menu{
   }
   #menuContact{
     display: block;
-  }
-  menu:hover #menuContent{
-    display: block;
-    top: 90px;
-    opacity: 100%;
-
   }
 }
 
@@ -166,12 +174,10 @@ menu{
     gap: 14px;
   }
 
-  menu:hover #menuContent{
-    display: block;
+  #menuContent{
     top: 75px;
     left: 0;
     width: 100vw;
-    opacity: 100%;
   }
 
 }
