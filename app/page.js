@@ -1,6 +1,7 @@
 import Image from "next/image";
 import mainCss from "./main.module.css"
 import SearchBox  from "@/components/Searchbox";
+import DonutChart from "@/components/DonutChart/DonutChart";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <br></br>
       <h2>Enter Station to Continue:</h2>
       <SearchBox />
+      <br /><br />
+      <DonutChart/>
 
       <br></br>
       <br></br>
